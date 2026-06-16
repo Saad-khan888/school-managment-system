@@ -22,6 +22,7 @@ import SpeedDialTemplate from "../../../components/SpeedDialTemplate";
 import Popup from "../../../components/Popup";
 import DeleteIcon from "@mui/icons-material/Delete";
 import PostAddIcon from '@mui/icons-material/PostAdd';
+import ClassFeeCollection from './ClassFeeCollection';
 // eslint-disable-next-line no-unused-vars
 import { alignProperty } from "@mui/material/styles/cssUtils";
 // eslint-disable-next-line no-unused-vars
@@ -346,6 +347,7 @@ const ClassDetails = () => {
                                     {/* <Tab label="Subjects" value="2" /> */}
                                     <Tab label="Students" value="3" />
                                     <Tab label="Teachers" value="4" />
+                                    <Tab label="Fee Collection" value="5" />
                                 </TabList>
                             </Box>
                             <Container sx={{ marginTop: "3rem", marginBottom: "4rem" }}>
@@ -360,6 +362,9 @@ const ClassDetails = () => {
                                 </TabPanel>
                                 <TabPanel value="4">
                                     <ClassTeachersSection />
+                                </TabPanel>
+                                <TabPanel value="5">
+                                    <ClassFeeCollection />
                                 </TabPanel>
                             </Container>
                         </TabContext>

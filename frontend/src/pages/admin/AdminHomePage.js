@@ -5,7 +5,6 @@ import SeeNotice from "../../components/SeeNotice";
 import Students from "../../assets/img1.png";
 import Classes from "../../assets/img2.png";
 import Teachers from "../../assets/img3.png";
-import Fees from "../../assets/img4.png";
 import styled from "styled-components";
 import CountUp from "react-countup";
 // Import necessary hooks from react-redux
@@ -14,6 +13,7 @@ import { useEffect } from "react";
 import { getAllSclasses } from "../../redux/sclassRelated/sclassHandle";
 import { getAllStudents } from "../../redux/studentRelated/studentHandle";
 import { getAllTeachers } from "../../redux/teacherRelated/teacherHandle";
+import { getAllNotices } from "../../redux/noticeRelated/noticeHandle";
 import addnotice from "../../assets/addnotice.jpg";
 
 const AdminHomePage = () => {
@@ -23,6 +23,7 @@ const AdminHomePage = () => {
   const { studentsList } = useSelector((state) => state.student);
   const { sclassesList } = useSelector((state) => state.sclass);
   const { teachersList } = useSelector((state) => state.teacher);
+  const { noticesList } = useSelector((state) => state.notice);
 
   // State to check if there is data
   const [hasData, setHasData] = useState(false);
@@ -43,7 +44,17 @@ const AdminHomePage = () => {
     dispatch(getAllStudents(adminID));
     dispatch(getAllSclasses(adminID, "Sclass"));
     dispatch(getAllTeachers(adminID));
+    dispatch(getAllNotices(adminID, "Notice"));
   }, [adminID, dispatch]);
+
+  // Check if notices exist and set hasData
+  useEffect(() => {
+    if (noticesList && noticesList.length > 0) {
+      setHasData(true);
+    } else {
+      setHasData(false);
+    }
+  }, [noticesList]);
 
   // Calculate the number of students, classes, and teachers
   const numberOfStudents = studentsList && studentsList.length;
@@ -55,32 +66,25 @@ const AdminHomePage = () => {
       <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
         {/* Grid container for the dashboard */}
         <Grid container spacing={3}>
-          <Grid item xs={12} md={3} lg={3}>
+          <Grid item xs={12} md={4} lg={4}>
             <StyledPaper>
               <img src={Students} alt="Students" />
               <Title>Total Students</Title>
-              <Data start={0} end={numberOfStudents} duration={2.5} />
+              <Data start={0} end={numberOfStudents || 0} duration={2.5} />
             </StyledPaper>
           </Grid>
-          <Grid item xs={12} md={3} lg={3}>
+          <Grid item xs={12} md={4} lg={4}>
             <StyledPaper>
               <img src={Classes} alt="Classes" />
               <Title>Total Classes</Title>
-              <Data start={0} end={numberOfClasses} duration={5} />
+              <Data start={0} end={numberOfClasses || 0} duration={5} />
             </StyledPaper>
           </Grid>
-          <Grid item xs={12} md={3} lg={3}>
+          <Grid item xs={12} md={4} lg={4}>
             <StyledPaper>
               <img src={Teachers} alt="Teachers" />
               <Title>Total Teachers</Title>
-              <Data start={0} end={numberOfTeachers} duration={2.5} />
-            </StyledPaper>
-          </Grid>
-          <Grid item xs={12} md={3} lg={3}>
-            <StyledPaper>
-              <img src={Fees} alt="Fees" />
-              <Title>Fees Collection</Title>
-              <Data start={0} end={23000} duration={2.5} prefix="$" />{" "}
+              <Data start={0} end={numberOfTeachers || 0} duration={2.5} />
             </StyledPaper>
           </Grid>
           {/* Grid item for the notice section */}

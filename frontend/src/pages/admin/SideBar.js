@@ -18,6 +18,7 @@ import ClassOutlinedIcon from "@mui/icons-material/ClassOutlined";
 import SupervisorAccountOutlinedIcon from "@mui/icons-material/SupervisorAccountOutlined";
 import ReportIcon from "@mui/icons-material/Report";
 import AssignmentIcon from "@mui/icons-material/Assignment";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 const SideBar = () => {
   // Get the current location from react-router-dom
@@ -129,6 +130,21 @@ const SideBar = () => {
             </ListItemIcon>
           </Tooltip> {/* Display the tooltip */}
           <ListItemText primary="Complains" /> {/* Text for the Complains button */}
+        </ListItemButton>
+        {/* Fees button */}
+        <ListItemButton component={Link} to="/Admin/fees">
+          <Tooltip title={"Fees"}>
+            <ListItemIcon>
+              <AttachMoneyIcon
+                color={
+                  location.pathname.startsWith("/Admin/fees")
+                    ? "primary"
+                    : "inherit"
+                }
+              />
+            </ListItemIcon>
+          </Tooltip>
+          <ListItemText primary="Fees" />
         </ListItemButton>
       </React.Fragment>
       <Divider sx={{ my: 1 }} />

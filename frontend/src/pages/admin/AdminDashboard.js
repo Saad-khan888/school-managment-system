@@ -46,6 +46,8 @@ import AddClass from "./classRelated/AddClass";
 import ClassDetails from "./classRelated/ClassDetails";
 import ShowClasses from "./classRelated/ShowClasses";
 import AccountMenu from "../../components/AccountMenu";
+import ShowFees from "./feeRelated/ShowFees";
+import SetFee from "./feeRelated/SetFee";
 
 // Define the AdminDashboard component
 const AdminDashboard = () => {
@@ -204,6 +206,12 @@ const AdminDashboard = () => {
               path="/Admin/teachers/addteacher/:id"
               element={<AddTeacher />}
             /> {/* Route for adding a teacher */}
+
+            {/* Fee */}
+            <Route path="/Admin/fees" element={<ShowFees />} />
+            <Route path="/Admin/fees/set" element={<SetFee />} />
+            <Route path="/Admin/fees/set/:id" element={<SetFee />} />
+
             <Route path="/logout" element={<Logout />} />
           </Routes>
         </Box>

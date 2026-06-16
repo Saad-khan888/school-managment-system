@@ -54,14 +54,14 @@ const TeacherHomePage = () => {
             <StyledPaper>
               <img src={Students} alt="Students" />
               <Title>Class Students</Title>
-              <Data start={0} end={numberOfStudents} duration={2.5} />
+              <Data start={0} end={numberOfStudents || 0} duration={2.5} />
             </StyledPaper>
           </Grid>
           <Grid item xs={12} md={3} lg={3}>
             <StyledPaper>
               <img src={Lessons} alt="Lessons" />
               <Title>Total Lessons</Title>
-              <Data start={0} end={numberOfSessions} duration={5} />
+              <Data start={0} end={numberOfSessions || 0} duration={5} />
             </StyledPaper>
           </Grid>
           <Grid item xs={12} md={3} lg={3}>

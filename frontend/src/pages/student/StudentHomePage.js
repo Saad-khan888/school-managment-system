@@ -63,7 +63,7 @@ const StudentHomePage = () => {
                             <Title>
                                 Total Subjects
                             </Title>
-                            <Data start={0} end={numberOfSubjects} duration={2.5} />
+                            <Data start={0} end={numberOfSubjects || 0} duration={2.5} />
                         </StyledPaper>
                         {/* Display total number of subjects */}
                     </Grid>

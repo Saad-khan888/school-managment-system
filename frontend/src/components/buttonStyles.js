@@ -6,7 +6,8 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  gap: 8px;
 `;
 
 // Red button style

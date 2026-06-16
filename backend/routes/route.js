@@ -24,6 +24,8 @@ const {
     removeStudentAttendance } = require('../controllers/student_controller.js');
 const { subjectCreate, classSubjects, deleteSubjectsByClass, getSubjectDetail, deleteSubject, freeSubjectList, allSubjects, deleteSubjects } = require('../controllers/subject-controller.js');
 const { teacherRegister, teacherLogIn, getTeachers, getTeacherDetail, deleteTeachers, deleteTeachersByClass, deleteTeacher, updateTeacherSubject, teacherAttendance } = require('../controllers/teacher-controller.js');
+const { setClassFee, getAllFees, getClassFee, deleteFee } = require('../controllers/fee-controller.js');
+const { getClassPayments, getStudentPayments, markFeePaid, getCurrentPeriodStatus } = require('../controllers/feePayment-controller.js');
 
 // Admin
 router.post('/AdminReg', adminRegister);
@@ -114,5 +116,18 @@ router.get("/Subject/:id", getSubjectDetail)
 router.delete("/Subject/:id", deleteSubject)
 router.delete("/Subjects/:id", deleteSubjects)
 router.delete("/SubjectsClass/:id", deleteSubjectsByClass)
+
+// Fee
+
+router.post('/FeeCreate', setClassFee);
+router.get('/FeeList/:id', getAllFees);
+router.get('/ClassFee/:id', getClassFee);
+router.delete('/Fee/:id', deleteFee);
+
+// Fee Payment
+
+router.post('/FeePayment', markFeePaid);
+router.get('/ClassPayments/:classId/:period', getCurrentPeriodStatus);
+router.get('/StudentPayments/:id', getStudentPayments);
 
 module.exports = router;

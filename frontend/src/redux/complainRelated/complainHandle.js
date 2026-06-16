@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BASE_URL } from "../../config";
 import { getRequest, getSuccess, getFailed, getError } from "./complainSlice";
 
 //const REACT_APP_BASE_URL="http://localhost:5000"
@@ -12,7 +13,7 @@ export const getAllComplains = (id, address) => async (dispatch) => {
   try {
     // Make an asynchronous GET request to the specified URL
     const result = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/${address}List/${id}`
+      `${BASE_URL}/${address}List/${id}`
     );
     
     if (result.data.message) {

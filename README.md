@@ -1,200 +1,274 @@
-<h1 align="center">
-    Edu-365
-</h1>
+# School Management System
 
-<h3 align="center">
-Transform your school’s daily operations into a dynamic, growth‐focused environment.<br>
-Easily organize classes, enroll students and faculty, and monitor progress in real time.<br>
-Utilize continuous attendance tracking, performance assessments, and timely feedback to drive improvement.<br>
-Access detailed records, review marks, and foster open communication to empower every learner.
-</h3>
-
-<br>
-LIVE LINK: https://school-management-system-hazel-eta.vercel.app
-
-BACKEND: https://edu-365.vercel.app
-
-**VIDEO PRESENTATION:** https://drive.google.com/file/d/1eh5Lf0SXdkLZWKr_I-B0aeFZnnZoh4e7/view?usp=drive_link
-# sample login for testing 
-
-Name: Sample Admin
-
-Email: sampleadmin@gmail.com
-
-School: PLP SCHOOL
-
-password: 123
-
-# techer 
-
-email: teacher4@gmail.com
-
-password: 12345
-
-# student
-
-Student Roll No: 1
-
-student name: DANIEL MUSYOKI
-
-password: 12345
-
-**NOTICE:** MAY TAKE SOME TIME  WHEN YOU TRY TO REGISTER OR LOG IN 
-
-<br>
-
-## About
-
-The School Management System is a cutting-edge, web-based application built on the powerful MERN (MongoDB, Express.js, React.js, Node.js) stack. Engineered for maximum efficiency, it revolutionizes school administration by:
-
-- **Centralizing and Automating Administrative Tasks:**  
-  Manage student and teacher enrollment, class creation, and scheduling from one unified dashboard.
-
-- **Streamlining Class Organization:**  
-  Easily create and manage classes and subjects, ensuring smooth day-to-day operations.
-
-- **Facilitating Real-Time Communication:**  
-  Enable seamless, role-based communication among administrators, teachers, and students.
-
-**Leveraging the MERN architecture, my system delivers:**
-
-1. **Unparalleled Scalability & Performance:**  
-   - Lightning-fast data retrieval using a database-driven approach  
-   - Seamless scalability to accommodate growing institutional needs  
-   - Optimized for handling large volumes of concurrent users and data
-
-2. **Intuitive User Experience:**  
-   - Responsive React.js frontend with sleek, user-friendly dashboards tailored for Admin, Teacher, and Student roles  
-   - Intuitive navigation and minimal learning curve for all users
-
-3. **Robust Back-End Integration:**  
-   - Node.js and Express.js powering efficient server-side operations  
-   - MongoDB’s flexible, document-based storage adapts to diverse data structures  
-   - Real-time data synchronization for up-to-the-minute information
-
-4. **Enhanced Security:**  
-   - Role-based access control to protect sensitive information  
-   - Encrypted data transmission and storage  
-   - Regular security updates to safeguard against potential vulnerabilities
-
-5. **Comprehensive Analytics:**  
-   - Built-in reporting tools for administrators and teachers  
-   - Interactive data visualization features (charts, tables) to track student performance trends  
-   - Actionable insights to drive continuous improvement in educational outcomes
-
-## What My Project Can Do
-
-- **Centralized Administration:**  
-  Automate and manage critical tasks like student and teacher enrollment, class creation, and scheduling—all from a single dashboard.
-
-- **Role-Based Dashboards:**  
-  Provide tailored, intuitive interfaces for administrators, teachers, and students(PARENTS), ensuring each group accesses the features they need.
-
-- **Real-Time Attendance Tracking:**  
-  Enable teachers to quickly mark attendance, generate reports, and monitor trends to help identify and address absenteeism.
-
-- **Performance Assessments:**  
-  Allow teachers to record marks, provide detailed feedback, and track students’ academic progress over time using interactive charts and reports.
-
-- **Effective Communication:**  
-  Facilitate real-time messaging and notifications between students, teachers, and administrators to foster collaboration and engagement.
-
-- **Data Visualization & Analytics:**  
-  Offer built-in reporting tools and data visualization features that help monitor academic performance and attendance, enabling data-driven decision-making.
-
-- **Robust Security Measures:**  
-  Protect sensitive information with role-based access control and encrypted data transmission and storage.
-
-- **Scalability & Performance:**  
-  Leverage the MERN stack to support rapid data retrieval and scalability, ensuring the system grows with your institution while maintaining high performance.
-
-- **Seamless Deployment & Maintenance:**  
-  Clear installation and error-resolution guidelines simplify setup locally and deployment to production environments using services like Render and Netlify.
-
-In essence, our School Management System empowers schools to streamline administrative processes, enhance educational outcomes, and create a connected, growth-focused environment where every stakeholder has the tools they need for success.
+A comprehensive school management system built with MERN stack (MongoDB, Express, React, Node.js) featuring role-based access control for Admin, Teachers, and Students.
 
 ## Features
 
-- **User Roles:**  
-  The system supports three user roles: Admin, Teacher, and Student(PARENTS). Each role has specific functionalities and access levels.
+### 👨‍💼 Admin Features
+- **Dashboard**: Overview of students, teachers, classes, and fee collection
+- **Class Management**: Create and manage classes
+- **Subject Management**: Add subjects to classes
+- **Student Management**: Add, view, update, and delete students
+- **Teacher Management**: Assign teachers to subjects and classes
+- **Attendance Tracking**: Monitor student attendance
+- **Exam Management**: Record and manage student marks
+- **Notice Board**: Create and manage school notices
+- **Complaint Management**: View and handle complaints
+- **Fee Management**: 
+  - Set fee structures for each class (Monthly/Quarterly/Yearly)
+  - Track fee payments per student
+  - View payment history by period
 
-- **Admin Dashboard:**  
-  Administrators can add new students and teachers, create classes and subjects, manage user accounts, and oversee system settings.
+### 👨‍🏫 Teacher Features
+- **Dashboard**: Overview of assigned classes and students
+- **Class Details**: View students in assigned class
+- **Attendance**: Mark and manage student attendance
+- **Marks Entry**: Record exam results for students
+- **Complaints**: Submit complaints to admin
 
-- **Attendance Tracking:**  
-  Teachers can easily take attendance for their classes, mark students as present or absent, and generate attendance reports.
+### 👨‍🎓 Student Features
+- **Dashboard**: Personal academic overview
+- **Subjects**: View enrolled subjects
+- **Attendance**: Check attendance records
+- **Marks**: View exam results
+- **Complaints**: Submit complaints to admin
+- **Notices**: View school announcements
 
-- **Performance Assessment:**  
-  Teachers can assess students' performance by providing marks and feedback. Students can view their marks and track their progress over time.
+## Tech Stack
 
-- **Data Visualization:**  
-  Students and teachers can visualize performance data through interactive charts and tables for an at-a-glance understanding.
+**Frontend:**
+- React 18.2
+- Redux Toolkit (State Management)
+- Material-UI (UI Components)
+- React Router v6 (Navigation)
+- Vite (Build Tool)
+- Axios (HTTP Client)
+- Styled Components
+- Recharts (Data Visualization)
 
-- **Communication:**  
-  Facilitate effective communication via in-system messaging and notifications among students, teachers, and administrators.
-
-## Technologies Used
-
-- **Frontend:** React.js, Material UI, Redux  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB
+**Backend:**
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- Bcrypt (Password Hashing)
+- JWT Authentication
+- CORS
 
 ## Installation
 
-Clone the repository:
-```sh
-git clone https://github.com/daniel-ndeto/school-management-system.git
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- MongoDB (local or Atlas)
+- Git
 
+### Clone Repository
+```bash
+git clone https://github.com/Saad-khan888/school-managment-system.git
+cd school-managment-system
+```
 
-### Setup Backend
-1. Open a terminal and navigate to the `backend` folder:
-   
-   cd backend
-   npm install
-   npm start
-   ```
-2. Create a `.env` file in the `backend` folder and add:
-   ```sh
-   MONGO_URL = mongodb://127.0.0.1/school
-   ```
-   *(Replace with your MongoDB Atlas link if necessary.)*
+### Backend Setup
 
-### Setup Frontend
-1. Open another terminal and navigate to the `frontend` folder:
-   ```sh
-   cd frontend
-   npm install
-   npm start
-   ```
-2. Open your browser and navigate to `localhost:3000` for the frontend.  
-   The backend API will run at `localhost:5000`.
+1. Navigate to backend directory:
+```bash
+cd backend
+```
 
-## Error Solution
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you encounter a sign-up error (e.g., a network error or endless loading):
+3. Create `.env` file:
+```bash
+cp .env.example .env
+```
 
-1. **Frontend Environment Variables:**
-   - Navigate to `frontend/.env` and uncomment the first line.
-   - Restart the frontend server:
-     ```sh
-     cd frontend
-     npm start
-     ```
+4. Update `.env` with your MongoDB connection:
+```env
+MONGO_URL=mongodb://127.0.0.1/school
+PORT=5000
+```
 
-2. **Update Base URL in Code:**
-   - In `frontend/src/redux/userRelated/userHandle.js`, add after the import statements:
-     ```javascript
-     const REACT_APP_BASE_URL = "http://localhost:5000";
-     ```
-   - Replace all instances of `process.env.REACT_APP_BASE_URL` with `REACT_APP_BASE_URL` in files containing "Handle" in their names (e.g., in `teacherRelated` and other related folders).
+5. Start the backend server:
+```bash
+npm start
+```
 
-3. **Account Setup:**
-   - Sign up first rather than logging in as a guest.  
-   - For guest mode, use credentials from an existing account in the system as specified in `LoginPage.js`.
+Backend will run on `http://localhost:5000`
 
+### Frontend Setup
 
-## Deployment
+1. Navigate to frontend directory (from project root):
+```bash
+cd frontend
+```
 
-- **Backend:** Deployed using **Render** for server-side operations.
-- **Frontend:** Deployed using **Netlify** for client-side hosting.
+2. Install dependencies:
+```bash
+npm install
+```
 
+3. Create `.env` file:
+```bash
+cp .env.example .env
+```
+
+4. Update `.env`:
+```env
+VITE_BASE_URL=http://localhost:5000
+```
+
+5. Start the frontend development server:
+```bash
+npm start
+```
+
+Frontend will run on `http://localhost:3000`
+
+## Seeding Database (Optional)
+
+To populate the database with dummy data:
+
+```bash
+cd backend
+node seedData.js
+```
+
+This will create:
+- 5 Classes (Grade 1-5)
+- 25 Subjects (5 per class)
+- 10 Teachers
+- 75-125 Students
+- 5 Notices
+- 8 Complaints
+- 5 Fee Structures
+
+**Default Login Credentials after seeding:**
+- **Admin**: dawood@gmail.com / 1234567890
+- **Teachers**: [firstname][lastname]@school.com / teacher123
+- **Students**: Roll number / student123
+
+## Project Structure
+
+```
+school-management-system/
+├── backend/
+│   ├── controllers/       # Request handlers
+│   ├── models/           # MongoDB schemas
+│   ├── routes/           # API routes
+│   ├── index.js          # Server entry point
+│   ├── seedData.js       # Database seeding script
+│   └── package.json
+│
+├── frontend/
+│   ├── public/           # Static assets
+│   ├── src/
+│   │   ├── assets/       # Images and icons
+│   │   ├── components/   # Reusable components
+│   │   ├── pages/        # Page components
+│   │   │   ├── admin/    # Admin pages
+│   │   │   ├── teacher/  # Teacher pages
+│   │   │   └── student/  # Student pages
+│   │   ├── redux/        # Redux store and slices
+│   │   ├── App.js        # Main app component
+│   │   └── index.js      # Entry point
+│   ├── vite.config.js    # Vite configuration
+│   └── package.json
+│
+└── README.md
+```
+
+## API Endpoints
+
+### Authentication
+- `POST /AdminReg` - Register admin
+- `POST /AdminLogin` - Admin login
+- `POST /StudentLogin` - Student login
+- `POST /TeacherLogin` - Teacher login
+
+### Classes
+- `POST /SclassCreate` - Create class
+- `GET /SclassList/:id` - Get all classes
+- `GET /Sclass/:id` - Get class details
+- `DELETE /Sclass/:id` - Delete class
+
+### Students
+- `POST /StudentReg` - Register student
+- `GET /Students/:id` - Get all students
+- `GET /Student/:id` - Get student details
+- `PUT /Student/:id` - Update student
+- `DELETE /Student/:id` - Delete student
+- `PUT /StudentAttendance/:id` - Mark attendance
+- `PUT /UpdateExamResult/:id` - Update exam results
+
+### Teachers
+- `POST /TeacherReg` - Register teacher
+- `GET /Teachers/:id` - Get all teachers
+- `GET /Teacher/:id` - Get teacher details
+- `PUT /TeacherSubject` - Update teacher subject
+- `DELETE /Teacher/:id` - Delete teacher
+
+### Subjects
+- `POST /SubjectCreate` - Create subject
+- `GET /ClassSubjects/:id` - Get class subjects
+- `GET /Subject/:id` - Get subject details
+- `DELETE /Subject/:id` - Delete subject
+
+### Notices
+- `POST /NoticeCreate` - Create notice
+- `GET /NoticeList/:id` - Get all notices
+- `DELETE /Notice/:id` - Delete notice
+
+### Complaints
+- `POST /ComplainCreate` - Create complaint
+- `GET /ComplainList/:id` - Get all complaints
+
+### Fees
+- `POST /FeeCreate` - Set class fee
+- `GET /FeeList/:id` - Get all fees
+- `POST /FeePayment` - Mark fee paid
+- `GET /ClassPayments/:classId/:period` - Get payment status
+
+## Features in Detail
+
+### Fee Management System
+The fee management system allows:
+1. **Setting Fees**: Admin sets fee amount and period (Monthly/Quarterly/Yearly/One-time) for each class
+2. **Payment Tracking**: Mark students as paid for specific periods
+3. **Payment History**: View which students paid in which periods
+4. **Auto-Reset**: Payment status resets based on the selected period
+5. **Collection Summary**: View total students paid and amount collected per period
+
+### Attendance System
+- Mark attendance for individual students
+- Track attendance by subject
+- View attendance history and percentages
+- Clear attendance records if needed
+
+### Examination System
+- Record marks for each subject
+- View student performance
+- Track exam results over time
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Support
+
+For support, email your-email@example.com or open an issue in the repository.
+
+## Acknowledgments
+
+- Material-UI for the component library
+- Redux Toolkit for state management
+- Vite for blazing fast development experience

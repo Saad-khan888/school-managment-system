@@ -16,7 +16,7 @@ const TableTemplate = ({ buttonHaver: ButtonHaver, columns, rows }) => {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   return (
     <>
-      <TableContainer>
+      <TableContainer >
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <StyledTableRow>

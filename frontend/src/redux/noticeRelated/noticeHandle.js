@@ -1,4 +1,5 @@
 import axios from "axios";
+import { BASE_URL } from "../../config";
 import { getRequest, getSuccess, getFailed, getError } from "./noticeSlice";
 
 //const REACT_APP_BASE_URL="http://localhost:5000"
@@ -10,7 +11,7 @@ export const getAllNotices = (id, address) => async (dispatch) => {
   try {
     // Make an asynchronous GET request to the specified URL
     const result = await axios.get(
-      `${process.env.REACT_APP_BASE_URL}/${address}List/${id}`
+      `${BASE_URL}/${address}List/${id}`
     );
     // Check if the response contains a message indicating an error
     if (result.data.message) {

@@ -16,7 +16,8 @@ app.use(express.json({ limit: "10mb" }));
 // --- CORS Configuration ---
 // Only allow your frontend’s Vercel domain
 const allowedOrigins = [
-  "https://school-management-system-hazel-eta.vercel.app",
+  "https://school-managment-system.vercel.app",  // Your main Vercel URL
+  "https://school-managment-system-git-main-saad-khan888s-projects.vercel.app",  // Vercel preview URLs
   "http://localhost:3000",
   "http://127.0.0.1:3000"
 ];
